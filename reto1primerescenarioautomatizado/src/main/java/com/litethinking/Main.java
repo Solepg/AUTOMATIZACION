@@ -48,7 +48,7 @@ public class Main {
         System.out.println("Prueba Fallida");
         }
      
-      }
+        }
       catch(Exception e)
         {
         System.out.println("Producto MacBook air no encontrado");
@@ -67,49 +67,52 @@ public class Main {
     
       if (Precio1.getText().equals("$1100 *includes tax")) {
       System.out.println("Prueba Exitosa!!");
-    } else {
+      } 
+      else {
       System.out.println("Prueba Fallida");
-    }
+      }
 
-    WebElement salir1 = driver.findElement(By.id("nava"));
-    salir1.click();
+      WebElement salir1 = driver.findElement(By.id("nava"));
+      salir1.click();
 
-    WebElement Laptops3 = driver.findElement(By.linkText("Laptops"));
-    Laptops3.click();
-    WebElement Laptops4 = driver.findElement(By.linkText("Dell i7 8gb"));
-    Laptops4.click();
-    WebElement Precio2 = driver.findElement(By.className("price-container"));
-    
-    System.out.println("Precio Dell i7 8gb: " + Precio2.getText());
+      WebElement Laptops3 = driver.findElement(By.linkText("Laptops"));
+      Laptops3.click();
+      WebElement Laptops4 = driver.findElement(By.linkText("Dell i7 8gb"));
+      Laptops4.click();
+      WebElement Precio2 = driver.findElement(By.className("price-container"));
+      
+      System.out.println("Precio Dell i7 8gb: " + Precio2.getText());
 
-    if (Precio2.getText().equals("$700 *includes tax")) {
+      if (Precio2.getText().equals("$700 *includes tax")) {
       System.out.println("Prueba Exitosa!!");
-    } else {
+      } 
+      else {
       System.out.println("Prueba Fallida");
-    }
+      }
 
-    WebElement salir2 = driver.findElement(By.id("nava"));
-    salir2.click();
+      WebElement salir2 = driver.findElement(By.id("nava"));
+      salir2.click();
 
-    WebElement Monitors = driver.findElement(By.linkText("Monitors"));
-    Monitors.click();
-    WebElement Monitors1 = driver.findElement(By.linkText("ASUS Full HD"));
-    Monitors1.click();
-    WebElement Precio3 = driver.findElement(By.className("price-container"));
-    
-    System.out.println("Precio ASUS Full HD: " + Precio3.getText());
+      WebElement Monitors = driver.findElement(By.linkText("Monitors"));
+      Monitors.click();
+      WebElement Monitors1 = driver.findElement(By.linkText("ASUS Full HD"));
+      Monitors1.click();
+      WebElement Precio3 = driver.findElement(By.className("price-container"));
+      
+      System.out.println("Precio ASUS Full HD: " + Precio3.getText());
 
-    if (Precio3.getText().equals("$230 *includes tax")) {
+      if (Precio3.getText().equals("$230 *includes tax")) {
       System.out.println("Prueba Exitosa!!");
-    } else {
+      } 
+      else {
       System.out.println("Prueba Fallida");
-    }
+      }
 
-    WebElement salir3 = driver.findElement(By.id("nava"));
-    salir3.click();
+      WebElement salir3 = driver.findElement(By.id("nava"));
+      salir3.click();
 
-    driver.close();
-    driver.quit();
+      driver.close();
+      driver.quit();
  
-}
+    }
 }
