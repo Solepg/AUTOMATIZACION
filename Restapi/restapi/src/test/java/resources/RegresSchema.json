@@ -1,0 +1,42 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "PRUEBA API REST - JSON SCHEMA",
+    "type": "object",
+    "required": [
+      "page",
+      "per_page",
+      "total",
+      "total_pages",
+      "data"   	
+      ],
+      
+       "properties":{
+      "page":{ 
+        "description": "Pagina donde se encuentran los usuarios",
+      	"type": "number"
+      },
+      "per_page":{
+        "description": "Personas por pagina",
+        "type": "number"
+      },
+      "total":{
+        "description": "Total Personas",
+        "type": "number"
+      },
+      "total_pages":{
+        "description": "Total paginas",
+        "type": "number"
+      },			
+       "data":{
+        "description": "Información de los usuarios", 
+        "type": "array",
+        "required": [  
+          "id",
+          "email",
+          "first_name",
+          "last_name",
+          "avatar"
+          ]
+      }
+                  } 
+  }
