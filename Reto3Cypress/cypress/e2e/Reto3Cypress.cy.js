@@ -23,7 +23,7 @@ describe('Prueba RestApi con Cypress', () => {
       cy.log('Response Body' + JSON.stringify(response.body))
       cy.log('Response Headers' + JSON.stringify(response.headers))
       cy.validateSchema(response.body, schemaJson)
-      expect(response.status).to.equal(200) 
+      expect(response.status).to.equal(200)
       cy.log('///////////////////////////')
     })
   })
