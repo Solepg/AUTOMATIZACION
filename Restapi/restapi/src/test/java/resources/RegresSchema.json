@@ -1,42 +1,61 @@
 {
-	"$schema": "https://json-schema.org/draft/2019-09/schema",
-    "title": "PRUEBA API REST - JSON SCHEMA",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Ejercicio RestApi",
+  "type": "object",
+  "required": [
+      "data",
+      "support"
+  ],
+  "properties": {
+      "data": {
+          "type": "object",
+          "required": [
+              "id",
+              "email",
+              "first_name",
+              "last_name",
+              "avatar"
+          ],
+          "properties": {
+              "id": {
+                  "description": "id campo único generado para cada uno de los usuarios",
+                  "type": "integer"
+              },
+              "email": {
+                  "description": "Este campo esta destinado para el correo electronico del usuario",
+                  "type": "string"
+              },
+              "first_name": {
+                  "description": "Este campo esta destinado para el nombre del usuario",
+                  "type": "string"
+              },
+              "last_name": {
+                  "description": "Este campo esta destinado para el apaellido del usuario",
+                  "type": "string"
+              },
+              "avatar": {
+                  "description": "Este campo esta destinado para el avatar del usuario",
+                  "type": "string",
+                  "format": "uri"
+              }
+          }
+      },
+      "support": {
     "type": "object",
     "required": [
-      "page",
-      "per_page",
-      "total",
-      "total_pages",
-      "data"   	
-      ],
-      
-       "properties":{
-      "page":{ 
-        "description": "Pagina donde se encuentran los usuarios",
-      	"type": "number"
+      "url",
+      "text"
+    ],
+    "properties": {
+      "url": {
+        "type": "string",
+        "format": "uri"
       },
-      "per_page":{
-        "description": "Personas por pagina",
-        "type": "number"
-      },
-      "total":{
-        "description": "Total Personas",
-        "type": "number"
-      },
-      "total_pages":{
-        "description": "Total paginas",
-        "type": "number"
-      },			
-       "data":{
-        "description": "Información de los usuarios", 
-        "type": "array",
-        "required": [  
-          "id",
-          "email",
-          "first_name",
-          "last_name",
-          "avatar"
-          ]
+      "text": {
+        "description": "Este campo esta destinado para el texto del usuario",
+        "type": "string"
       }
-                  } 
+    }
   }
+  }
+}

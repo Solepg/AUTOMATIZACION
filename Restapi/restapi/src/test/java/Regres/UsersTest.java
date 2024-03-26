@@ -44,8 +44,10 @@ public class UsersTest {
         URIBuilder uri = new URIBuilder()
             .setScheme("https")
             .setHost("reqres.in")
-            .setPath("api/users")
-            .addParameter("page", "page=2");
+            .setPath("api/users?")
+            .addParameter("delay", "3")
+            .addParameter("page","2")
+            .addParameter("id","12");
           
         System.out.println("Endpoint "  + uri.build());
 
@@ -59,14 +61,11 @@ public class UsersTest {
         System.out.println("Response: " + response.body());
 
         assertEquals(HttpStatus.SC_OK, response.statusCode());
-        assertTrue(response.body().contains("\"text\":\"To keep ReqRes free, contributions towards server costs are appreciated!\""));       
+        assertTrue(response.body().contains("\"name\":\"honeysuckle\""));       
      
         String validationSchema =  JsonSchemaValidator.validateJsonAgainstSchema(response.body(), "RegresSchema.json");
         System.out.println("Resultado de la validacion del Schema: " + validationSchema);
  
         assertEquals("", validationSchema, "Resultado de la validacion del schema");
-
-    }
- 
-         
+    }         
 }
